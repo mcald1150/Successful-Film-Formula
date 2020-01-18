@@ -1,0 +1,161 @@
+,num_movies,country
+0,21153,United States of America
+1,4094,United Kingdom
+2,3940,France
+3,2254,Germany
+4,2169,Italy
+5,1765,Canada
+6,1648,Japan
+7,964,Spain
+8,912,Russia
+9,828,India
+10,596,Hong Kong
+11,588,Sweden
+12,570,Australia
+13,495,South Korea
+14,447,Belgium
+15,386,Denmark
+16,383,Finland
+17,375,Netherlands
+18,372,China
+19,329,Mexico
+20,319,Poland
+21,291,Brazil
+22,254,Argentina
+23,254,Switzerland
+24,225,Ireland
+25,209,Austria
+26,209,Czech Republic
+27,203,Norway
+28,175,Hungary
+29,169,Greece
+30,165,Turkey
+31,147,Israel
+32,142,Romania
+33,129,Taiwan
+34,128,Portugal
+35,125,South Africa
+36,123,New Zealand
+37,116,Thailand
+38,106,Iran
+39,106,Serbia
+40,90,Luxembourg
+41,83,Philippines
+42,78,Croatia
+43,68,Iceland
+44,68,Chile
+45,59,Estonia
+46,56,Bulgaria
+47,55,Ukraine
+48,41,Singapore
+49,36,Lithuania
+50,35,Bosnia and Herzegovina
+51,34,Colombia
+52,33,Indonesia
+53,33,Morocco
+54,32,Slovenia
+55,30,Georgia
+56,30,Slovakia
+57,30,Peru
+58,29,Latvia
+59,27,United Arab Emirates
+60,25,Cuba
+61,25,Egypt
+62,23,Kazakhstan
+63,20,Soviet Union
+64,19,Venezuela
+65,18,Uruguay
+66,18,Pakistan
+67,18,Tunisia
+68,15,Lebanon
+69,15,Macedonia
+70,14,Senegal
+71,14,Qatar
+72,13,Puerto Rico
+73,13,Algeria
+74,13,Malaysia
+75,11,Palestinian Territory
+76,10,Burkina Faso
+77,10,Bolivia
+78,10,Vietnam
+79,10,Ecuador
+80,9,Jordan
+81,9,Belarus
+82,9,Cambodia
+83,9,Malta
+84,8,Afghanistan
+85,8,Dominican Republic
+86,8,Iraq
+87,8,Armenia
+88,8,Liechtenstein
+89,7,Panama
+90,7,Cyprus
+91,7,Montenegro
+92,6,Nigeria
+93,6,Uzbekistan
+94,6,Kyrgyz Republic
+95,6,Aruba
+96,6,East Germany
+97,6,Costa Rica
+98,6,Guatemala
+99,6,Nepal
+100,5,Ethiopia
+101,5,Cameroon
+102,5,Mauritania
+103,5,Albania
+104,5,Syrian Arab Republic
+105,5,Bahamas
+106,5,Congo
+107,4,Rwanda
+108,4,Ghana
+109,4,Chad
+110,4,Jamaica
+111,4,Monaco
+112,4,Yugoslavia
+113,4,Czechoslovakia
+114,4,Bhutan
+115,3,Nicaragua
+116,3,Lao People's Democratic Republic
+117,3,Namibia
+118,3,Kenya
+119,3,Mongolia
+120,3,Botswana
+121,3,Zimbabwe
+122,3,Tajikistan
+123,3,Angola
+124,3,Sri Lanka
+125,3,North Korea
+126,3,Liberia
+127,3,Paraguay
+128,3,Serbia and Montenegro
+129,3,El Salvador
+130,3,Libyan Arab Jamahiriya
+131,2,Macao
+132,2,Saudi Arabia
+133,2,Papua New Guinea
+134,2,Tanzania
+135,2,Trinidad and Tobago
+136,2,Uganda
+137,2,Bangladesh
+138,2,Cote D'Ivoire
+139,2,Mali
+140,2,Azerbaijan
+141,1,Netherlands Antilles
+142,1,Martinique
+143,1,Samoa
+144,1,Gibraltar
+145,1,French Polynesia
+146,1,Somalia
+147,1,Myanmar
+148,1,Barbados
+149,1,Kuwait
+150,1,Bermuda
+151,1,Madagascar
+152,1,United States Minor Outlying Islands
+153,1,Antarctica
+154,1,Guinea
+155,1,Cayman Islands
+156,1,Honduras
+157,1,Brunei Darussalam
+158,1,French Southern Territories
+159,1,Moldova

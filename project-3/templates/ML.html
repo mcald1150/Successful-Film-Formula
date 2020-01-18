@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Successful Film Formula</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+      <nav class="navbar navbar-default">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <a class="navbar-brand" href="index.html">Successful Film Formula
+                    <img class="nav-ufo" src="images/reel.svg">
+                  </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="DA.html" style="float:right">Data Analysis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ML.html" style="float: right;margin-left: 20px;">Machine Learning</a>
+                    </li>
+                </ul>
+              </div>    
+          </div>
+      </nav>
+    <!-- Content Section -->
+    <div class="hero text-center">
+            <h1>Successful Film Formula</h1>
+            <p>Here is insight of movie</p>
+    </div>
+    <!-- Code Here!-->
+    <div class="container">
+      <div class="jumbotron" style="text-align: center">
+        <h1>Movie Revenue Prediction</h1>
+        <!-- <a href="/send" class="btn btn-primary" role="button">Add Pet</a> -->
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <h2>Look at all of the current pet pals!</h2> -->
+          <div id="plot"></div>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <aside class="filters">
+          <div class="panel panel-default">
+            <!-- <div class="panel-heading">Filter Search</div> -->
+            <div class="panel-body">
+              <form method="POST" action="/ml">
+                <div class="form-group">
+                  <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="date">Enter Budget Value</label>
+                      <input class="form-control" id="budgetvalue" type="text" placeholder="100000" name="budgetvalue">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Popularity</label>
+                      <input class="form-control" id="popularityvalue" type="text" placeholder="10" name="popularityvalue">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Vote Count</label>
+                      <input class="form-control" id="votecountvalue" type="text" placeholder="100" name="votecountvalue" >
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Vote Average 1-10</label>
+                      <input class="form-control" id="voteaveragevalue" type="text" placeholder="1" name="voteaveragevalue">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Year</label>
+                      <input class="form-control" id="yearvalue" type="text" placeholder="1999" name="yearvalue">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Month</label>
+                      <input class="form-control" id="monthvalue" type="text" placeholder="12" name="monthvalue">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="date">Run Time</label>
+                      <input class="form-control" id="runtimevalue" type="text" placeholder="120" name="runtimevalue">
+                    </li>
+                    
+                    <li class="filter list-group-item">
+                      <label>Action</label>
+                      <input type="checkbox" id="ActionCheckBox" name= "ActionCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>History</label>
+                      <input type="checkbox" id="HistoryCheckBox" name= "HistoryCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Fantasy</label>
+                      <input type="checkbox" id="FantasyCheckBox" name= "FantasyCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Romance</label>
+                      <input type="checkbox" id="RomanceCheckBox" name= "RomanceCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Family</label>
+                      <input type="checkbox" id="FamilyCheckBox" name= "FamilyCheckBox"onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Documentary</label>
+                      <input type="checkbox" id="DocumentaryCheckBox" name= "DocumentaryCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Comedy</label>
+                      <input type="checkbox" id="ComedyCheckBox" name= "ComedyCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Western</label>
+                      <input type="checkbox" id="WesternCheckBox" name= "WesternCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>TV Movie</label>
+                      <input type="checkbox" id="TVMovieCheckBox" name= "TVMovieCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Adventure</label>
+                      <input type="checkbox" id="AdventureCheckBox" name= "AdventureCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>War</label>
+                      <input type="checkbox" id="WarCheckBox" name= "WarCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Music</label>
+                      <input type="checkbox" id="MusicCheckBox" name= "MusicCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Animation</label>
+                      <input type="checkbox" id="AnimationCheckBox" name= "AnimationCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Drama</label>
+                      <input type="checkbox" id="DramaCheckBox" name= "DramaCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Horror</label>
+                      <input type="checkbox" id="HorrorCheckBox" name= "HorrorCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Foreign</label>
+                      <input type="checkbox" id="ForeignCheckBox" name= "ForeignCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Science Fiction</label>
+                      <input type="checkbox" id="ScienceFictionCheckBox" name= "ScienceFictionCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Mystery</label>
+                      <input type="checkbox" id="MysteryCheckBox" name= "MysteryCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Thriller</label>
+                      <input type="checkbox" id="ThrillerCheckBox" name= "ThrillerCheckBox" onclick="myFunction()">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label>Crime</label>
+                      <input type="checkbox" id="CrimeCheckBox" name= "CrimeCheckBox" onclick="myFunction()">
+                    </li>
+      
+                  </ul>
+                </div>
+                <!-- <button id="filter-btn" type="button" class="btn btn-default">Prediction</button> -->
+                <input type="submit" value="Prediction">
+              </form>
+              
+              <div class="col-md-3">
+  
+                <div>This Model uses linear regression with sklearn's standardscaling</div>
+  
+                <div>The R-squared score is:</div>
+                <div id="r2score"></div>
+                <div>Mean Squared Error:</div>
+                <div id="mse"></div>
+                
+  
+                <h2 style="text-align: center">Predicted Revenue:</h2>
+                <h3 id="predictrevenue" style="text-align: center">10000</h3>
+  
+                
+              </div>
+  
+            </div>
+          </div>
+        </aside>
+      </div>
+  
+      <div class="jumbotron" style="text-align: center">
+        <!-- <a href="/send" class="btn btn-primary" role="button">Add Pet</a> -->
+      </div>
+  
+  
+      
+  
+  
+    </div>
+
+    
+    <footer class="footer">
+      <span class="bottom">Successful Movie Formula</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+  <script>
+    function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("ActionCheckBox");
+  // Get the output text
+ 
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    // text.style.display = "block";
+    console.log("checked");
+    var text1 = d3.select("#predictrevenue").text();
+    console.log("text1 says: ", text1);
+    // remove_markers_flag = true;
+
+  } else {
+    // text.style.display = "block";
+    // remove_markers_flag = false;
+    console.log("unchecked");
+  }
+} 
+
+
+
+  </script>
+
+<script>
+
+// d3.select("#predictrevenue").text(`r`);
+  d3.select("#predictrevenue").text("$"+`{{data.predicted}}`);
+  d3.select("#r2score").text(`{{data.r2}}`);
+  d3.select("#mse").text(`{{data.mse}}`);
+  console.log("this is:",`{{data.ActionCheckBox}}`);
+
+  // d3.select("#budgetvalue").text('999');
+  d3.select("#budgetvalue").property("value", `{{data.budgetvalue}}`);
+  d3.select("#popularityvalue").property("value", `{{data.popularityvalue}}`);
+  d3.select("#votecountvalue").property("value", `{{data.votecountvalue}}`);
+  d3.select("#voteaveragevalue").property("value", `{{data.voteaveragevalue}}`);
+  d3.select("#yearvalue").property("value", `{{data.yearvalue}}`);
+  d3.select("#monthvalue").property("value", `{{data.monthvalue}}`);
+  d3.select("#runtimevalue").property("value", `{{data.runtimevalue}}`);
+
+
+
+
+
+  if (`{{data.ActionCheckBox}}` == 'True'){
+    
+    d3.select("#ActionCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.HistoryCheckBox}}` == 'True'){
+    
+    d3.select("#HistoryCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.FantasyCheckBox}}` == 'True'){
+    
+    d3.select("#FantasyCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.RomanceCheckBox}}` == 'True'){
+    
+    d3.select("#RomanceCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.FamilyCheckBox}}` == 'True'){
+    
+    d3.select("#FamilyCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.DocumentaryCheckBox}}` == 'True'){
+    
+    d3.select("#DocumentaryCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.ComedyCheckBox}}` == 'True'){
+    
+    d3.select("#ComedyCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.WesternCheckBox}}` == 'True'){
+    
+    d3.select("#WesternCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.TVMovieCheckBox}}` == 'True'){
+    
+    d3.select("#TVMovieCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.AdventureCheckBox}}` == 'True'){
+    
+    d3.select("#AdventureCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.WarCheckBox}}` == 'True'){
+    
+    d3.select("#WarCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.MusicCheckBox}}` == 'True'){
+    
+    d3.select("#MusicCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.AnimationCheckBox}}` == 'True'){
+    
+    d3.select("#AnimationCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.DramaCheckBox}}` == 'True'){
+    
+    d3.select("#DramaCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.HorrorCheckBox}}` == 'True'){
+    
+    d3.select("#HorrorCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.ForeignCheckBox}}` == 'True'){
+    
+    d3.select("#ForeignCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.ScienceFictionCheckBox}}` == 'True'){
+    
+    d3.select("#ScienceFictionCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.ThrillerCheckBox}}` == 'True'){
+    
+    d3.select("#ThrillerCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.MysteryCheckBox}}` == 'True'){
+    
+    d3.select("#MysteryCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+  if (`{{data.CrimeCheckBox}}` == 'True'){
+    
+    d3.select("#CrimeCheckBox").property('checked', true);
+  }
+  else {
+  console.log("You are not satisfied with your pay.");
+  }
+
+</script>
+</body>
+
+</html>
